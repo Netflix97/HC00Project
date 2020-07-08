@@ -5,15 +5,13 @@ public class Flight {
 	private String destination2;
 	private String date;
 	private String time;
-	private double price;
 	
 	//Constructor
-	public Flight(String destination1, String destination2, String date, String time, double price) {
+	public Flight(String destination1, String destination2, String date, String time) {
 		this.destination1 = destination1;
 		this.destination2 = destination2;
 		this.date = date;
 		this.time = time;
-		this.price = price;
 	}
 	
 	//Mutator	
@@ -32,10 +30,7 @@ public class Flight {
 	public void setTime(String time) {
 		this.time = time;
 	}
-	
-	public void setPrice(double price) {
-		this.price = price;
-	}
+
 	
 	//Accessor
 	public String getDestination1()	{
@@ -53,10 +48,6 @@ public class Flight {
 	public String getTime()	{
 		return time;
 	}
-	
-	public double getPrice()	{
-		return price;
-	}
-	
+		
 
 }

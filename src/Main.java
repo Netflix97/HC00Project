@@ -11,8 +11,8 @@ public class Main {
 		ArrayList<Customer> customers = new ArrayList<Customer>();
 		
 		//Add Flight
-		flights.add(new Flight("Kota Kinabalu", "Senai", "12-07-2020", "10:30 - 15:50", 290));
-		flights.add(new Flight("Senai", "Kota Kinabalu", "12-07-2020", "10:30 - 15:50", 290));
+		flights.add(new Flight("Kota Kinabalu", "Senai", "12-07-2020", "10:30 - 15:50"));
+		flights.add(new Flight("Senai", "Kota Kinabalu", "12-07-2020", "10:30 - 15:50"));
 		
 		
 		//Display
@@ -33,6 +33,14 @@ public class Main {
 		Booking booking = new Booking(customer, flights.get(flightNumber-1));
 		bookings.add(booking);
 		System.out.println("The seat is now reserved for you.");
+		int totalCost = 0;
+        if (booking.getCostumer().getId() == customer.getId()) {
+        		totalCost += booking.getCost();
+        }
+        
+        System.out.println("Costumer ID: " + customer.getId());
+        System.out.println("Total costs: " + totalCost + " Euro");
+        System.out.println();
 		//Cancel Booking
 
 	}

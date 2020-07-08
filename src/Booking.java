@@ -8,6 +8,14 @@ public class Booking {
 		this.customer = customer;
 		this.flight = flight;
 	}
-
+	
+	public Customer getCostumer() {
+		return customer;
+	}
+	
+	public int getCost(){
+		return 100;
+		
+	}
 
 }
