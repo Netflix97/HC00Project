@@ -6,9 +6,13 @@ public class Main {
 		// TODO Auto-generated method stub
 		
 		//int option = 0;
-		ArrayList <Flight> flights = new ArrayList <Flight>();
-		ArrayList<Booking> bookings = new ArrayList<Booking>();
-		ArrayList<Customer> customers = new ArrayList<Customer>();
+		ArrayList <Flight> flights = new ArrayList<>();
+		ArrayList<Booking> bookings = new ArrayList<>();
+		ArrayList<Customer> customers = new ArrayList<>();
+		
+		//Add Flight
+		flights.add(new Flight("Kota Kinabalu", "Senai", "12-07-2020", "10:30 - 15:50", 10));
+		flights.add(new Flight("Senai", "Kota Kinabalu", "12-07-2020", "10:30 - 15:50", 10));
 		
 		//Add Flight
 		flights.add(new Flight("Kota Kinabalu", "Senai", "12-07-2020", "10:30 - 15:50", 10));
