@@ -34,9 +34,10 @@ public class Customer {
 	}
 	
 	public void printCostumer() {
-		System.out.print(name);
-		System.out.println(email);
-		System.out.println(phone);
+		public void printCostumer() {
+		System.out.print("ID :" +id);
+		System.out.println("Email: " + email);
+		System.out.println("Phone: " + phone);
 	}
 
 }
