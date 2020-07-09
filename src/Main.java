@@ -11,8 +11,8 @@ public class Main {
 		ArrayList<Customer> customers = new ArrayList<Customer>();
 		
 		//Add Flight
-		flights.add(new Flight("Kota Kinabalu", "Senai", "12-07-2020", "10:30 - 15:50"));
-		flights.add(new Flight("Senai", "Kota Kinabalu", "12-07-2020", "10:30 - 15:50"));
+		flights.add(new Flight("Kota Kinabalu", "Senai", "12-07-2020", "10:30 - 15:50", 10));
+		flights.add(new Flight("Senai", "Kota Kinabalu", "12-07-2020", "10:30 - 15:50", 10));
 		
 		
 		//Display
@@ -21,18 +21,30 @@ public class Main {
         		System.out.println("Flight Number: " + list);;
             		System.out.println("From: " + flights.get(i).getDestination1());
             		System.out.println("To: " + flights.get(i).getDestination2());
+                  System.out.println("Time: " + flights.get(i).getTime());
+                  System.out.println("Seat: " + flights.get(i).getSeat());
             		System.out.println("\n");
 		}
 		
 		//Booking
 		Random rnd = new Random();
+      int x = flights.get(0).getSeat();
 		int flightNumber = 1;
 		int costumerId = rnd.nextInt(999);
 		Customer customer = new Customer(costumerId, "Kennedy Wee", "kennedywee@gmail.com", "0137735813");
 		customers.add(customer);
 		Booking booking = new Booking(customer, flights.get(flightNumber-1));
 		bookings.add(booking);
-		System.out.println("The seat is now reserved for you.");
+      
+      if (x > 0){
+		   System.out.println("The seat is now reserved for you.");
+         x = x - 1;
+         System.out.println("There are " + x + " seats left.");
+      }
+      else {
+         System.out.println("There are no available seat to be reserved for you.");
+      }
+      
 		int totalCost = 0;
         	if (booking.getCostumer().getId() == customer.getId()) {
         		totalCost += booking.getCost();
@@ -41,7 +53,26 @@ public class Main {
         	System.out.println("Costumer ID: " + customer.getId());
         	System.out.println("Total costs: " + totalCost + " Euro");
         	System.out.println();
+         
 		//Cancel Booking
+      
+      Scanner choice = new Scanner(System.in);
+	   System.out.print("Enter the costumer id: ");
+	   int customerId = choice.nextInt();
+	      if (customer.getId() == customerId)
+         {
+
+	            if (booking.getCostumer().getId() == customer.getId())
+	            {
+                  System.out.println("Your reservation has been canceled!");
+	            }
+         }
+         else
+         {
+              System.out.println("Incorrect customer id!");
+         }
+	   System.out.println();
+	                    
 
 	}
 
