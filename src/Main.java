@@ -18,10 +18,10 @@ public class Main {
 		//Display
 		for(int i = 0; i < flights.size(); i++) {
 			int list = i+1;
-        	System.out.println("Flight Number: " + list);;
-            System.out.println("From: " + flights.get(i).getDestination1());
-            System.out.println("To: " + flights.get(i).getDestination2());
-            System.out.println("\n");
+        		System.out.println("Flight Number: " + list);;
+            		System.out.println("From: " + flights.get(i).getDestination1());
+            		System.out.println("To: " + flights.get(i).getDestination2());
+            		System.out.println("\n");
 		}
 		
 		//Booking
@@ -34,13 +34,13 @@ public class Main {
 		bookings.add(booking);
 		System.out.println("The seat is now reserved for you.");
 		int totalCost = 0;
-        if (booking.getCostumer().getId() == customer.getId()) {
+        	if (booking.getCostumer().getId() == customer.getId()) {
         		totalCost += booking.getCost();
-        }
+        	}
         
-        System.out.println("Costumer ID: " + customer.getId());
-        System.out.println("Total costs: " + totalCost + " Euro");
-        System.out.println();
+        	System.out.println("Costumer ID: " + customer.getId());
+        	System.out.println("Total costs: " + totalCost + " Euro");
+        	System.out.println();
 		//Cancel Booking
 
 	}
